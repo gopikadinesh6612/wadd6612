@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #20283b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+.hero {
+  background: #243b67;
+  color: white;
+  padding: 32px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  margin: 8px 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 15px #182b4a12;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccd3df;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #315bc4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.secondary {
+  background: #b93838;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  white-space: nowrap;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e4e8ef;
+}
+
+th {
+  background: #eef2fa;
+}
+
+.status {
+  padding: 5px 9px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.accepted {
+  background: #d8f5e2;
+  color: #176c3a;
+}
+
+.rejected, .cancelled {
+  background: #ffe0e0;
+  color: #9b2525;
+}
+
+.success, .error, .notice {
+  padding: 12px;
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+.success {
+  background: #d8f5e2;
+}
+
+.error {
+  background: #ffe0e0;
+  color: #9b2525;
+}
+
+.notice {
+  background: #e5edff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .hero, .panel {
+    padding: 16px;
+  }
+}
