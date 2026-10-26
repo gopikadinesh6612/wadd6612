@@ -1,0 +1,16 @@
+QUESTION 1 — Library Book Borrowing Management System
+
+Backend: Spring Boot with Maven and MongoDB. Create two collections:
+1. books(bookId, title, author, category, totalCopies, availableCopies, availabilityStatus). category must be an enum with FICTION, SCIENCE, HISTORY.
+2. loans(loanId, studentName, studentEmail, category, copiesBorrowed, borrowDate).
+
+Required routes:
+- POST /books: add a book record and validate copy counts.
+- GET /books: get all books.
+- GET /books/categories: get all allowed categories.
+- POST /loans: create a loan; reject invalid copy counts or requests exceeding available copies; reduce availableCopies and update availabilityStatus.
+- GET /loans: get all loans.
+- GET /loans/count-by-category: use a MongoDB aggregation query to count loan documents for each category.
+- Add MockMvc tests for all routes and error cases.
+
+Frontend: React with two components. Component 1 displays all books, using a different border color for each category. Component 2 displays loan counts by category.

@@ -1,0 +1,16 @@
+QUESTION 2 — Event Registration Management System
+
+Backend: Spring Boot with Maven and MongoDB. Create two collections:
+1. events(eventId, eventName, eventType, venue, capacity, availableSeats, availabilityStatus). eventType must be an enum with TECH, CULTURAL, SPORTS.
+2. registrations(registrationId, participantName, participantEmail, eventType, seatsRequested, registrationDate).
+
+Required routes:
+- POST /events: add an event and validate capacity/available seats.
+- GET /events: get all events.
+- GET /events/types: get all allowed event types.
+- POST /registrations: register a participant; reject requests exceeding available seats; reduce availableSeats and update availabilityStatus.
+- GET /registrations: get all registrations.
+- GET /registrations/count-by-type: use MongoDB aggregation to count registration documents by event type.
+- Add MockMvc tests for all routes and error cases.
+
+Frontend: React with two components. Component 1 displays events with a different border color for each event type. Component 2 displays registration counts by event type.

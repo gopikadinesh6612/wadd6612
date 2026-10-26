@@ -1,0 +1,16 @@
+QUESTION 3 — Course Registration Management System
+
+Backend: Spring Boot with Maven and MongoDB. Create two collections:
+1. courses(courseId, courseName, instructorName, courseLevel, capacity, availableSeats, availabilityStatus). courseLevel must be an enum with BEGINNER, INTERMEDIATE, ADVANCED.
+2. registrations(registrationId, studentName, studentEmail, courseLevel, seatsRequested, registrationDate).
+
+Required routes:
+- POST /courses: add a course and validate capacity/available seats.
+- GET /courses: get all courses.
+- GET /courses/levels: get all allowed course levels.
+- POST /registrations: register a student; reject requests exceeding available seats; reduce availableSeats and update availabilityStatus.
+- GET /registrations: get all registrations.
+- GET /registrations/count-by-level: use MongoDB aggregation to count registration documents by course level.
+- Add MockMvc tests for all routes and error cases.
+
+Frontend: React with two components. Component 1 displays courses with a different border color for each level. Component 2 displays registration counts by course level.
