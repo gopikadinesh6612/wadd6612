@@ -1,0 +1,11 @@
+<web-app>
+    <welcome-file-list><welcome-file>index.html</welcome-file-list>
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employee</url-pattern>
+    </servlet-mapping>
+</web-app>
